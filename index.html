@@ -5,93 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnimeVerse ⚡</title>
     <style>
-        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; text-align: center; overflow-x: hidden; }
-        .nav { background: #111; padding: 15px; border-bottom: 3px solid #00AEEF; color: #00AEEF; font-size: 26px; font-weight: bold; }
-        .player-box { width: 100%; aspect-ratio: 16/9; background: #000; border-bottom: 2px solid #333; }
+        body { background: #000; color: #fff; font-family: sans-serif; text-align: center; margin: 0; }
+        .nav { background: #111; padding: 15px; border-bottom: 3px solid #00AEEF; color: #00AEEF; font-size: 24px; font-weight: bold; }
+        .player { width: 100%; aspect-ratio: 16/9; background: #000; }
         iframe { width: 100%; height: 100%; border: none; }
-        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 15px; }
-        .card { background: #1a1a1a; border-radius: 12px; border: 1px solid #333; cursor: pointer; overflow: hidden; }
-        .card img { width: 100%; height: 110px; object-fit: cover; pointer-events: none; }
-        .dl-btn { display: inline-block; margin: 20px; padding: 12px 25px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .btn { display: inline-block; margin: 20px; padding: 12px 25px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="nav">ANIMEVERSE ⚡</div>
-    
-    <div class="player-box">
-        <iframe id="main-v" src="https://www.dailymotion.com/embed/video/x8h2z5o?autoplay=1&mute=1" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <div class="player">
+        <iframe src="https://www.dailymotion.com/embed/video/x8h2z5o?autoplay=1" allowfullscreen></iframe>
     </div>
-
-    <a id="main-d" href="https://archive.org/download/pokemon-season-1-indigo-league-hindi" target="_blank" class="dl-btn">📥 DOWNLOAD FULL SHOW</a>
-
-    <div class="grid">
-        <div class="card" onclick="stream('x8h2z5o', 'pokemon-season-1-indigo-league-hindi')">
-            <img src="https://m.media-amazon.com/images/M/MV5BNjU3N2QxNzYtMjk1NC00MTc2LTk1MGQtYmUxNmFmY2VlNzQyXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_.jpg">
-            <div style="padding:10px; font-size:12px;">Pokémon S1</div>
-        </div>
-        <div class="card" onclick="stream('x8l7x6t', 'doraemon-movie-hindi')">
-            <img src="https://m.media-amazon.com/images/M/MV5BMjA1Mjc4MDUzN15BMl5BanBnXkFtZTgwNjA2OTA4MTE@._V1_.jpg">
-            <div style="padding:10px; font-size:12px;">Doraemon Movie</div>
-        </div>
-    </div>
-
-    <script>
-        function stream(id, dl) {
-            // Using a force-load method to prevent "Unavailable" error
-            var p = document.getElementById('main-v');
-            p.src = "https://www.dailymotion.com/embed/video/" + id + "?autoplay=1";
-            document.getElementById('main-d').href = "https://archive.org/download/" + dl;
-            window.scrollTo(0,0);
-        }
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnimeVerse ⚡</title>
-    <style>
-        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; text-align: center; overflow-x: hidden; }
-        .nav { background: #111; padding: 15px; border-bottom: 3px solid #00AEEF; color: #00AEEF; font-size: 26px; font-weight: bold; }
-        .player-box { width: 100%; aspect-ratio: 16/9; background: #000; border-bottom: 2px solid #333; }
-        iframe { width: 100%; height: 100%; border: none; }
-        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 15px; }
-        .card { background: #1a1a1a; border-radius: 12px; border: 1px solid #333; cursor: pointer; overflow: hidden; }
-        .card img { width: 100%; height: 110px; object-fit: cover; pointer-events: none; }
-        .dl-btn { display: inline-block; margin: 20px; padding: 12px 25px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
-    </style>
-</head>
-<body>
-    <div class="nav">ANIMEVERSE ⚡</div>
-    
-    <div class="player-box">
-        <iframe id="main-v" src="https://www.dailymotion.com/embed/video/x8h2z5o?autoplay=1&mute=1" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-
-    <a id="main-d" href="https://archive.org/download/pokemon-season-1-indigo-league-hindi" target="_blank" class="dl-btn">📥 DOWNLOAD FULL SHOW</a>
-
-    <div class="grid">
-        <div class="card" onclick="stream('x8h2z5o', 'pokemon-season-1-indigo-league-hindi')">
-            <img src="https://m.media-amazon.com/images/M/MV5BNjU3N2QxNzYtMjk1NC00MTc2LTk1MGQtYmUxNmFmY2VlNzQyXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_.jpg">
-            <div style="padding:10px; font-size:12px;">Pokémon S1</div>
-        </div>
-        <div class="card" onclick="stream('x8l7x6t', 'doraemon-movie-hindi')">
-            <img src="https://m.media-amazon.com/images/M/MV5BMjA1Mjc4MDUzN15BMl5BanBnXkFtZTgwNjA2OTA4MTE@._V1_.jpg">
-            <div style="padding:10px; font-size:12px;">Doraemon Movie</div>
-        </div>
-    </div>
-
-    <script>
-        function stream(id, dl) {
-            // Using a force-load method to prevent "Unavailable" error
-            var p = document.getElementById('main-v');
-            p.src = "https://www.dailymotion.com/embed/video/" + id + "?autoplay=1";
-            document.getElementById('main-d').href = "https://archive.org/download/" + dl;
-            window.scrollTo(0,0);
-        }
-    </script>
+    <a href="https://archive.org/download/pokemon-season-1-indigo-league-hindi" target="_blank" class="btn">📥 DOWNLOAD SHOW</a>
 </body>
 </html>
 
