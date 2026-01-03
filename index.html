@@ -5,38 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnimeVerse ⚡</title>
     <style>
-        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; text-align: center; }
-        .header { background: #111; padding: 15px; border-bottom: 3px solid #00AEEF; color: #00AEEF; font-size: 26px; font-weight: bold; }
-        .player-box { width: 100%; max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; background: #111; }
+        body { background: #0b0b0d; color: white; font-family: sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
+        .header { background: #000; padding: 20px; border-bottom: 3px solid #00AEEF; color: #00AEEF; font-size: 28px; font-weight: bold; }
+        .player-container { width: 100%; max-width: 800px; margin: 10px auto; aspect-ratio: 16/9; background: #000; box-shadow: 0 0 20px rgba(0,174,239,0.2); }
         iframe { width: 100%; height: 100%; border: none; }
         .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 15px; }
-        .card { background: #1a1a1a; border-radius: 12px; border: 1px solid #333; cursor: pointer; overflow: hidden; }
+        .card { background: #1a1a1d; border-radius: 12px; border: 1px solid #333; cursor: pointer; overflow: hidden; transition: 0.3s; }
+        .card:hover { border-color: #00AEEF; transform: scale(1.02); }
         .card img { width: 100%; height: 110px; object-fit: cover; }
-        .btn-dl { display: inline-block; margin: 15px; padding: 12px 25px; background: #28a745; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; }
+        .btn-dl { display: inline-block; margin: 20px; padding: 15px 30px; background: #28a745; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 10px rgba(40,167,69,0.3); }
     </style>
 </head>
 <body>
     <div class="header">ANIMEVERSE ⚡</div>
-    <div class="player-box">
-        <iframe id="vid" src="https://www.dailymotion.com/embed/video/x8h2z5o?autoplay=1" allowfullscreen></iframe>
+    
+    <div class="player-container">
+        <iframe id="main-player" src="https://www.dailymotion.com/embed/video/x8h2z5o?autoplay=1" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
-    <a id="dl" href="https://archive.org/download/pokemon-season-1-indigo-league-hindi" target="_blank" class="btn-dl">📥 DOWNLOAD SHOW</a>
+
+    <a id="dl-link" href="https://archive.org/download/pokemon-season-1-indigo-league-hindi" target="_blank" class="btn-dl">📥 DOWNLOAD ALL EPISODES</a>
+
+    <div style="text-align:left; padding-left:20px; color:#00AEEF; font-weight:bold;">CHOOSE SHOW:</div>
     <div class="grid">
         <div class="card" onclick="play('x8h2z5o', 'pokemon-season-1-indigo-league-hindi')">
             <img src="https://m.media-amazon.com/images/M/MV5BNjU3N2QxNzYtMjk1NC00MTc2LTk1MGQtYmUxNmFmY2VlNzQyXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_.jpg">
-            <div style="padding:10px; font-size:12px;">Pokémon (S1)</div>
+            <div style="padding:10px; font-size:14px;">Pokémon S1 (Hindi)</div>
         </div>
         <div class="card" onclick="play('x8l7x6t', 'doraemon-movie-hindi')">
             <img src="https://m.media-amazon.com/images/M/MV5BMjA1Mjc4MDUzN15BMl5BanBnXkFtZTgwNjA2OTA4MTE@._V1_.jpg">
-            <div style="padding:10px; font-size:12px;">Doraemon Hits</div>
+            <div style="padding:10px; font-size:14px;">Doraemon Movie</div>
         </div>
     </div>
+
     <script>
         function play(vId, dId) {
-            // Updated to use Dailymotion backup server
-            document.getElementById('vid').src = "https://www.dailymotion.com/embed/video/" + vId + "?autoplay=1";
-            document.getElementById('dl').href = "https://archive.org/download/" + dId;
-            window.scrollTo(0,0);
+            document.getElementById('main-player').src = "https://www.dailymotion.com/embed/video/" + vId + "?autoplay=1";
+            document.getElementById('dl-link').href = "https://archive.org/download/" + dId;
+            window.scrollTo({top: 0, behavior: 'smooth'});
         }
     </script>
 </body>
