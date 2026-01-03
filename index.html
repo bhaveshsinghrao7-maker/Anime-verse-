@@ -7,33 +7,33 @@
     <style>
         body { background: #000; color: #fff; font-family: sans-serif; margin: 0; text-align: center; }
         .header { background: #111; padding: 15px; border-bottom: 3px solid #00AEEF; color: #00AEEF; font-size: 26px; font-weight: bold; }
-        .video-box { width: 100%; max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; }
+        .video-box { width: 100%; max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; background: #111; }
         iframe { width: 100%; height: 100%; border: none; }
         .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 15px; }
         .card { background: #1a1a1a; border-radius: 10px; border: 1px solid #333; cursor: pointer; }
-        .card img { width: 100%; height: 120px; object-fit: cover; }
+        .card img { width: 100%; height: 120px; object-fit: cover; border-bottom: 1px solid #333; }
         .btn-dl { display: inline-block; margin: 20px; padding: 12px 25px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="header">ANIMEVERSE ⚡</div>
     <div class="video-box">
-        <iframe id="player" src="https://www.dailymotion.com/embed/video/x8h2z5o" allowfullscreen></iframe>
+        <iframe id="player" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
     </div>
     <a id="dl" href="https://archive.org/download/pokemon-season-1-indigo-league-hindi" target="_blank" class="btn-dl">📥 DOWNLOAD NOW</a>
     <div class="grid">
-        <div class="card" onclick="change('x8h2z5o', 'pokemon-season-1-indigo-league-hindi')">
-            <img src="https://m.media-amazon.com/images/M/MV5BNjU3N2QxNzYtMjk1NC00MTc2LTk1MGQtYmUxNmFmY2VlNzQyXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_.jpg">
+        <div class="card" onclick="change('https://www.youtube.com/embed/dQw4w9WgXcQ', 'pokemon-season-1-indigo-league-hindi')">
+            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg">
             <div style="padding:10px; font-size:12px;">Pokemon S1</div>
         </div>
-        <div class="card" onclick="change('x8l7x6t', 'doraemon-movie-hindi')">
-            <img src="https://m.media-amazon.com/images/M/MV5BMjA1Mjc4MDUzN15BMl5BanBnXkFtZTgwNjA2OTA4MTE@._V1_.jpg">
+        <div class="card" onclick="change('https://www.youtube.com/embed/dQw4w9WgXcQ', 'doraemon-movie-hindi')">
+            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg">
             <div style="padding:10px; font-size:12px;">Doraemon Movie</div>
         </div>
     </div>
     <script>
         function change(v, d) {
-            document.getElementById('player').src = "https://www.dailymotion.com/embed/video/" + v;
+            document.getElementById('player').src = v;
             document.getElementById('dl').href = "https://archive.org/download/" + d;
             window.scrollTo(0,0);
         }
